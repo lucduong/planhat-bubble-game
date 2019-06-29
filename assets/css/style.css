@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+}
+
+.timer {
+  font-size: 70px;
+}
+
+.board {
+  position: relative;
+  margin-top: 20px;
+  width: 1100px;
+  height: 750px;
+}
+
+.board .bubble {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: grey;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 1s ease 0s;
+}
+
+.board .bubble .text {
+  margin-top: 40%;
+}
+
+.board .x-axis {
+  position: absolute;
+  width: 1080px;
+  height: 5px;
+  background: #000000;
+  bottom: -5px;
+  left: -5px;
+}
+
+.board .x-axis .p-0 {
+
+}
+
+.board .y-axis {
+  position: absolute;
+  width: 5px;
+  height: 600px;
+  background: #000000;
+  bottom: 0;
+  left: -5px;
+}
+
+.board .y-axis .p-0 {
+  position: absolute;
+  bottom: -10px;
+  left: -20px;
+}

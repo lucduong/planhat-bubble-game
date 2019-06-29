@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Planhat - The Bubble Game</title>
+  <meta name="description" content="The Bubble Game">
+  <meta name="author" content="luc@ltv.vn">
+  <link rel="stylesheet" href="assets/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="timer">{{timer}}</div>
+      <div class="board">
+          <div class="bubble"
+            v-for="(b, idx) in bubbles"
+            v-if="b.display"
+            :key="b.id" 
+            :style="{ top: `${b.position.y}px`, left: `${b.position.x}px`, backgroundColor: `${b.color}` }"
+            @click="handleBubbleClick(b, idx, $event)"
+          >
+            <div class="text">{{b.name}}</div>
+          </div>
+
+          <div class="x-axis">
+            <!-- <span class="point" v-for="p in xPoints" :key="p.label">|</span> -->
+            <div class="content">
+              <div class="p-0">360</div>
+            </div>
+          </div>
+          <div class="y-axis">
+            <div class="content">
+              <div class="p-0">30</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
